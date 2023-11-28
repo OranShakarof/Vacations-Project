@@ -1,0 +1,93 @@
+version: '3.8'
+
+# All 3 services:
+services:
+
+  # 1. Database Service:
+  mysql-service:
+
+    # Image name to create: 
+    image: oranshakarof/vacations-site-mysql:1.0
+    
+    # Where is the Dockerfile location:
+    build: ./Database
+
+    # Container name: 
+    container_name: vacations-site-mysql
+
+    # Port binding (host:container):
+    ports:
+      - 3306:3306
+
+    # On crash - restart unless we stopped it manually: 
+    restart: unless-stopped
+
+    # Environment variables needed by MySQL image: 
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_USER: Oran
+      MYSQL_PASSWORD: Shakarof
+      MYSQL_DATABASE: vacations-site # Case Sensitive!
+      MYSQL_ROOT_PASSWORD: Shakarof
+
+    # Volume:
+    volumes:
+      - vacations-site:/var/lib/mysql 
+
+
+  #  2. REST API:
+  api-service:
+
+    # On which other service we're depending on: 
+    depends_on:
+      - mysql-service
+
+    # Image name to create: 
+    image: oranshakarof/vacations-site-api:1.0
+
+    # Where is the Dockerfile location:
+    build: ./Backend
+
+    # Container name: 
+    container_name: vacations-site-api
+
+    # Port binding (host:container):
+    ports:
+      - 4000:4000
+
+    # On crash - restart unless we stopped it manually: 
+    restart: unless-stopped
+
+    # Environment variables needed by the api service: 
+    environment:
+      MYSQL_HOST: mysql-service # Service name is a computer network name. 
+      MYSQL_USER: Oran
+      MYSQL_PASSWORD: Shakarof
+      MYSQL_DATABASE: vacations-site
+
+
+  # 3. Frontend Service: 
+  react-service: 
+
+  # On which other service we're depending on: 
+    depends_on:
+      - api-service
+
+    # Image name to create: 
+    image: oranshakarof/vacations-site-react:1.0
+
+    # Where is the Dockerfile location:
+    build: ./Frontend
+
+    # Container name: 
+    container_name: vacations-site-react
+
+    # Port binding (host:container):
+    ports:
+      - 3000:3000
+
+    # On crash - restart unless we stopped it manually: 
+    restart: unless-stopped
+  
+volumes:
+  vacations-site:

@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "970d52e7-5b28-49bc-a79b-51ecfdfb55c7",
+		"name": "Vacations REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28624935"
+	},
+	"item": [
+		{
+			"name": "Vacations",
+			"item": [
+				{
+					"name": "Get Vacations By User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/vacations-by-user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations-by-user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Vacation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vacation Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/53f3b9d8-f2b7-4df0-ac10-148e3172e0e2.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"53f3b9d8-f2b7-4df0-ac10-148e3172e0e2.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Vacation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "destination",
+									"value": "Greece",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "The Amazing Greece",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2023-10-23",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-10-28",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "345",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/OranS/Downloads/greece.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/vacations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Full Vacation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "destination",
+									"value": "Rome",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Experience the timeless allure of Rome with our vacation site as your guide. Roam the ancient streets, where history comes to life through iconic landmarks like the Colosseum and Vatican City. Delight in exquisite Italian cuisine at charming eateries and sip espresso at quaint cafes. Immerse yourself in art and culture, from Michelangelo's Sistine Chapel to the treasures of the Borghese Gallery. Explore the city's vibrant neighborhoods, blending history with modernity. Whether you're a history buff, a foodie, or a seeker of romance, Rome promises an unforgettable journey. Pack your bags and let the Eternal City enchant you, creating cherished memories to last a lifetime.",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2023-09-17",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-09-21",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "800",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/John-Bryce/Projects/Project3-OranShakarof/Backend/src/1-assets/images/b0fad28f-d3cf-4cda-bd8e-f75069020c8b.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vacation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"destination\": \"TEst\",\r\n        \"description\": \"Welcome to New York, the city that never sleeps, where every moment pulses with ambition and culture. Our vacation site is your key to the Big Apple's iconic experiences, from the Statue of Liberty's majestic presence to the serenity of Central Park and the rich offerings of world-class museums. Savor diverse culinary delights, from street-side hot dogs to gourmet dining in Manhattan's chic restaurants. New York is a city of towering skyscrapers, Broadway's dazzling shows, and bustling neighborhoods, and our site ensures your visit is effortless. Pack your bags and dive into the boundless energy and allure of New York City, where every day promises new adventures and unforgettable memories. New York, the City That Never Sleeps, invites you to craft your own urban tale!\",\r\n        \"startDate\": \"2023-11-04T22:00:00.000Z\",\r\n        \"endDate\": \"2023-11-18T22:00:00.000Z\",\r\n        \"price\": 7845,\r\n        \"image\": \"3\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZmlyc3ROYW1lIjoiT3JhbiIsImxhc3ROYW1lIjoiU2hha2Fyb2YiLCJlbWFpbCI6Ik9yYW5TaGFrYXJvZkBnbWFpbC5jb20iLCJyb2xlIjoyfSwiaWF0IjoxNjk2NTg5ODY5LCJleHAiOjE2OTY2MDQyNjl9.UZ0DnY5qGujdWeWbDuOogH4KY72b-tQuCObaQzoHZmE",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Moishe\",\r\n    \"lastName\": \"Ufnik\",\r\n    \"email\": \"MoisheUfnikHashed@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"OranShakarof@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Followers",
+			"item": [
+				{
+					"name": "Get Followers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/followers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"followers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Follow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 3,\r\n    \"vacationId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/followers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"followers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Follow",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"destination\": \"TEst\",\r\n        \"description\": \"Welcome to New York, the city that never sleeps, where every moment pulses with ambition and culture. Our vacation site is your key to the Big Apple's iconic experiences, from the Statue of Liberty's majestic presence to the serenity of Central Park and the rich offerings of world-class museums. Savor diverse culinary delights, from street-side hot dogs to gourmet dining in Manhattan's chic restaurants. New York is a city of towering skyscrapers, Broadway's dazzling shows, and bustling neighborhoods, and our site ensures your visit is effortless. Pack your bags and dive into the boundless energy and allure of New York City, where every day promises new adventures and unforgettable memories. New York, the City That Never Sleeps, invites you to craft your own urban tale!\",\r\n        \"startDate\": \"2023-11-04T22:00:00.000Z\",\r\n        \"endDate\": \"2023-11-18T22:00:00.000Z\",\r\n        \"price\": 7845,\r\n        \"image\": \"3\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/followers/3&1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"followers",
+								"3&1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZmlyc3ROYW1lIjoiT3JhbiIsImxhc3ROYW1lIjoiU2hha2Fyb2YiLCJlbWFpbCI6Ik9yYW5TaGFrYXJvZkBnbWFpbC5jb20iLCJyb2xlIjoyfSwiaWF0IjoxNjk1MTI2NDA2LCJleHAiOjE2OTUxNDA4MDZ9.JX4fR7NwT009IWM25tw5GckDsnK48N5vnySQJsQOGn8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

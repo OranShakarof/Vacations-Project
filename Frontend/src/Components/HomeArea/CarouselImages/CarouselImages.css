@@ -1,0 +1,41 @@
+.CarouselImages{
+    margin: auto;
+    width: 45%;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.CarouselImages .images{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 12px 6px 6px 6px;
+    box-shadow: 7px 5px 5px;
+
+}
+
+.CarouselImages .linkStyle{
+    position: absolute;
+    top: 90%; 
+    left: 38%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.CarouselImages .fontStyle{
+    font-family: 'Great Vibes';
+    font-size: x-large;
+    color: white;
+    text-decoration: none;
+}
+
+.CarouselImages .fontStyle:hover{
+    color: bisque;
+    text-decoration: underline;
+}
+
+.CarouselImages .LoginButton{
+    text-transform: none;
+}

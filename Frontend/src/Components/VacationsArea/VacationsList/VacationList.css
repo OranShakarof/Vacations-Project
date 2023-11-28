@@ -1,0 +1,81 @@
+.VacationList .selectStyle {
+  margin: 10px;
+  text-align: center;
+}
+
+.VacationList select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  color: white;
+}
+
+.VacationList option{
+    color: black;
+}
+
+.VacationList select::-ms-expand {
+  display: none;
+}
+
+:root {
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+
+.VacationList .select {
+  margin: auto;
+  margin-top: 10px;
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(
+    to right,
+    #603813 0%,
+    #b29f94 51%,
+    #603813 100%
+  );
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.VacationList .select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+
+
+.VacationList select,
+.select:after {
+  grid-area: select;
+}
+
+.VacationList .select:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}

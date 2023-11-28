@@ -1,0 +1,10 @@
+.AuthMenu .NavLink {
+  color: black;
+  text-decoration: none;
+}
+
+.AuthMenu .NavLink:hover {
+  text-decoration: underline;
+  color: grey;
+  transform: scale(1.2);
+}

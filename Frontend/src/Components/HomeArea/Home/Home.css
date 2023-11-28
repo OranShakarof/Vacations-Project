@@ -1,0 +1,19 @@
+.Home {
+	text-align: center;
+}
+
+@font-face {
+    font-family: 'Great Vibes';
+    src: url('../../../Assets/Fonts/Great_Vibes/GreatVibes-Regular.ttf') format('truetype');
+    font-weight: 350; 
+    font-style: normal; 
+}
+
+.Home > h2 {
+    font-family: 'Great Vibes';
+    font-size: 9vh;
+    color: whitesmoke;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+

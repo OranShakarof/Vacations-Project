@@ -1,0 +1,20 @@
+.Menu .Navbar {
+  backdrop-filter: blur(8px) brightness(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+.Menu .NavLink {
+  color: black;
+  text-decoration: none;
+}
+
+.Menu .NavLink:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+.Menu .Right{
+    margin-left: auto;
+}

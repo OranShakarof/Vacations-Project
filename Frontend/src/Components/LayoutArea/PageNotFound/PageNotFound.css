@@ -1,0 +1,13 @@
+.PageNotFound{
+    text-align: center;
+}
+.PageNotFound > img {
+    padding: 30px;
+    width: 650px;
+    height: 450px;
+}
+
+.PageNotFound .navStyle{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,139 @@
+.VacationCard .Badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px;
+}
+
+.VacationCard .Badge .NavLink {
+  color: white;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.VacationCard .Badge .NavLink:hover {
+  text-decoration: underline;
+  color: black;
+  transform: scale(1.2);
+}
+
+.VacationCard .center {
+  display: flex;
+  height: 230px;
+  align-items: center;
+  justify-content: center;
+}
+
+.VacationCard .article-card {
+  width: 350px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+
+.VacationCard .article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.VacationCard .article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.VacationCard .article-card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.VacationCard .article-card .date,
+.article-card .title,
+.price,
+.moreInfo {
+  margin: 0;
+}
+
+.VacationCard .price {
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.VacationCard .moreInfo {
+  position: absolute;
+  left: 35%;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.VacationCard .article-card .date,
+.price {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.VacationCard .article-card .title {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.VacationCard .like-active {
+  color: red;
+  cursor: pointer;
+}
+
+.VacationCard .like {
+  color: white;
+  cursor: pointer;
+}
+
+.VacationCard .moreInfo {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: system-ui, sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.VacationCard .moreInfo {
+  --c: #229091; /* the color*/
+
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p, 0%)) 0%,
+    var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+}
+.VacationCard .moreInfo:hover {
+  --_p: 100%;
+  transition: background-position 0.4s, background-size 0s;
+  opacity: 0.8;
+}
+.VacationCard .moreInfo:active {
+  box-shadow: 0 0 9e9Q inset #0009;
+  background-color: var(--c);
+  color: #fff;
+  opacity: 0.8;
+}
+
+.VacationCard .unStyle{
+    text-decoration: none;
+    color: white;
+}
